@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "python-tricks"
+version = "0.1.0"
+description = ""
+authors = ["al-shams <a.shamsadn@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.metadata]
+poetry = "1.8.3"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.base.dependencies]
+rich = "13.9.2"
+pre-commit = "4.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+exclude = [
+    ".[ev]env*/**",
+]
+lint.select = [
+    "E",
+    "F",
+    "B",
+    "I",
+    "TID",
+]
+[tool.ruff.format]
+line-ending = "auto"
+skip-magic-trailing-comma = false
+quote-style = "double"
+
+[tool.codespell]
+skip = "*Dockerfile,*.lock"
+count = true

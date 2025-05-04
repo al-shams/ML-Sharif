@@ -1,0 +1,40 @@
+[project]
+name = "ml-sharif"
+version = "0.1.0"
+requires-python = "==3.12.10"
+dependencies = [
+    "rich==13.9.2",
+    "pre-commit==4.0.1",
+    "ruff==0.9.1",
+    "numpy==2.2.5",
+    "matplotlib==3.10.1",
+    "notebook==7.4.1",
+    "jupyter==1.1.1",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.metadata]
+poetry = "2.0.1"
+
+[tool.ruff]
+exclude = [
+    ".*/**",
+]
+lint.select = [
+    "E",
+    "F",
+    "B",
+    "I",
+    "TID",
+]
+[tool.ruff.format]
+line-ending = "auto"
+skip-magic-trailing-comma = false
+quote-style = "double"
+
+[tool.codespell]
+skip = "*.lock,"
+count = true

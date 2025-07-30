@@ -1,9 +1,8 @@
 include .env
 
 .DEFAULT_GOAL := lint
-PATH_SEP := $(shell python ./scripts/os/get_path_separator.py)
-SCRIPT_PATH := .$(PATH_SEP)scripts$(PATH_SEP)rich$(PATH_SEP)make_text_pretty.py
 
+SCRIPT_PATH := ./scripts/rich/make_text_pretty.py
 NOTES_DIR = notes
 GPG_DECRYPT_OPTS = --pinentry-mode loopback
 

@@ -31,6 +31,8 @@ lint.select = [
     "I",
     "TID",
 ]
+[tool.ruff.lint.per-file-ignores]
+"/*.ipynb" = ["F811"]
 [tool.ruff.format]
 line-ending = "auto"
 skip-magic-trailing-comma = false
